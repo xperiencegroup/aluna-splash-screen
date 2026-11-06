@@ -12,6 +12,8 @@ import mr2 from "./assets/logos/mr2.svg";
 import InstagramIcon from "./assets/icons/insta-icon";
 import WhatsappIcon from "./assets/icons/whatsapp-icon";
 import FacebookIcon from "./assets/icons/facebook-icon";
+import { TRACK } from "./analytics/track.constants";
+import { track } from "./analytics/track";
 
 // pages
 const pages = [
@@ -22,6 +24,7 @@ const pages = [
     logo: alunaResidencialLogo,
     logoAlt: "Logo Aluna Residencial",
     href: "/alunaresidencial/",
+    tracking: TRACK.ALUNA_RESIDENCIAL,
   },
   {
     id: "senderos-de-aluna",
@@ -30,6 +33,7 @@ const pages = [
     logo: senderosLogo,
     logoAlt: "Logo Senderos de Aluna",
     href: "/senderosdealuna/",
+    tracking: TRACK.SENDEROS_DE_ALUNA,
   },
 ];
 
@@ -39,18 +43,21 @@ export const social_links = [
     title: "Instagram",
     Icon: InstagramIcon,
     href: "https://www.instagram.com/viveenaluna/?utm_source=aluna_splash&utm_medium=website&utm_campaign=instagram_link",
+    tracking: TRACK.INSTAGRAM,
   },
   {
     id: "whatsapp",
     title: "WhatsApp",
     Icon: WhatsappIcon,
     href: "https://wa.me/50230256073?utm_source=aluna_splash&utm_medium=website&utm_campaign=whatsapp_link",
+    tracking: TRACK.WHATSAPP,
   },
   {
     id: "facebook",
     title: "Facebook",
     Icon: FacebookIcon,
     href: "https://www.facebook.com/viveenaluna?utm_source=aluna_splash&utm_medium=website&utm_campaign=facebook_link",
+    tracking: TRACK.FACEBOOK,
   },
 ];
 
@@ -93,6 +100,7 @@ export default function Home() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track(link.tracking)}
                 aria-label={link.title}
                 className={`group flex justify-center items-center size-[46px] p-[8px] rounded-full border-[1.5px] border-beige transition-colors ease-in-out hover:bg-beige mobile-short:size-[38px] mobile-short:p-[7px] ${link.id === "whatsapp" ? "bg-proposito hover:border-proposito" : "bg-impulso hover:border-impulso"} overflow-hidden`}
               >
@@ -141,6 +149,7 @@ export default function Home() {
               <a
                 key={page.id}
                 href={page.href}
+                onClick={() => track(page.tracking)}
                 className={`relative flex w-full max-w-[330px] md:w-[330px] aspect-[330/111] justify-center items-center rounded-full ${page.bgColor} transition-transform duration-300 hover:-translate-y-1 mobile-short:max-w-[280px]`}
               >
                 <div className="relative w-full h-[70%] pointer-events-none">
