@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "aluna-splash-screen.vercel.app" }],
       "destination": "https://www.aluna.gt/",
       "permanent": true
