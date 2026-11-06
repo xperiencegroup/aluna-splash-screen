@@ -38,19 +38,19 @@ export const social_links = [
     id: "instagram",
     title: "Instagram",
     Icon: InstagramIcon,
-    href: "https://www.instagram.com/viveenaluna/",
+    href: "https://www.instagram.com/viveenaluna/?utm_source=aluna_splash&utm_medium=website&utm_campaign=instagram_link",
   },
   {
     id: "whatsapp",
     title: "WhatsApp",
     Icon: WhatsappIcon,
-    href: "https://wa.me/50230256073",
+    href: "https://wa.me/50230256073?utm_source=aluna_splash&utm_medium=website&utm_campaign=whatsapp_link",
   },
   {
     id: "facebook",
     title: "Facebook",
     Icon: FacebookIcon,
-    href: "https://www.facebook.com/viveenaluna",
+    href: "https://www.facebook.com/viveenaluna?utm_source=aluna_splash&utm_medium=website&utm_campaign=facebook_link",
   },
 ];
 
