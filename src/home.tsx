@@ -134,7 +134,7 @@ export default function Home() {
             className="w-full max-w-[363px] mobile-short:max-w-[240px]"
           />
 
-          <p className="hero-title">
+          <p className="text-center md:text-left hero-title">
             Donde cada espacio <br />
             <span className="font-semibold italic">es una nueva historia</span>
           </p>
