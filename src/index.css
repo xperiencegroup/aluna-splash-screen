@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "@fontsource/poppins";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/poppins/600-italic.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-beige);
+  color: var(--color-beige);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Paleta Senderos de Aluna
+   Base + 4 derivados (1 = mÃ¡s cercano al base, 4 = mÃ¡s claro) */
+@theme {
+  --color-beige: #f2ece1;
+
+  /* Origen */
+  --color-origen: #3c4142;
+  --color-origen-1: #435053;
+  --color-origen-2: #5c686b;
+  --color-origen-3: #8a9699;
+  --color-origen-4: #c7d5d8;
+
+  /* Impulso */
+  --color-impulso: #df7a5f;
+  --color-impulso-1: #da816a;
+  --color-impulso-2: #e5a18f;
+  --color-impulso-3: #f3c7bc;
+  --color-impulso-4: #ffd7cd;
+
+  /* PropÃ³sito */
+  --color-proposito: #166d5c;
+  --color-proposito-1: #297969;
+  --color-proposito-2: #459081;
+  --color-proposito-3: #5fa799;
+  --color-proposito-4: #9cbfb8;
+
+  /* Encuentro */
+  --color-encuentro: #89c38b;
+  --color-encuentro-1: #86cd88;
+  --color-encuentro-2: #97ca99;
+  --color-encuentro-3: #b3d9b4;
+  --color-encuentro-4: #c7e3c8;
+
+  /* Horizonte */
+  --color-horizonte: #daf4af;
+  --color-horizonte-1: #def5b7;
+  --color-horizonte-2: #e4f7c5;
+  --color-horizonte-3: #e8f8ce;
+  --color-horizonte-4: #f0fade;
+}
+
+@custom-variant mobile-short (@media (width < 48rem) and (height < 800px));
+
+@layer components {
+  .hero-title {
+    @apply text-[32px] leading-[100%] mobile-short:text-[24px];
+  }
+  .cta-label {
+    @apply text-[20px] mobile-short:text-[16px];
+  }
+  .social-handle {
+    @apply text-[16px] mobile-short:text-[14px];
+  }
+  .badge-label {
+    @apply text-[16px] mobile-short:text-[13px];
+  }
+}
