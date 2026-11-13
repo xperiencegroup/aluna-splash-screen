@@ -116,7 +116,7 @@ export default function Home() {
       </div>
 
       {/* desarrollado por MR2 */}
-      <div className="absolute z-5 bottom-[7%] md:bottom-[12%] right-[4%] w-[130px] h-[65px] mobile-short:w-[100px] mobile-short:h-[50px]">
+      <div className="absolute z-5 bottom-[7%] md:bottom-[12%] right-[4%] w-[100px] h-[50px] mobile-short:w-[80px] mobile-short:h-[40px] md:w-[160px] md:h-[80px]">
         <img
           src={mr2}
           alt="Desarrollado por MR2"
